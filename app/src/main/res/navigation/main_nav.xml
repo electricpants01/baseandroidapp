@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.locotodevteam.androidbaseapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detaiFragment"
+            app:destination="@id/detaiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detaiFragment"
+        android:name="com.locotodevteam.androidbaseapp.DetailFragment"
+        android:label="fragment_detai"
+        tools:layout="@layout/fragment_detai" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="body"
+            app:argType="string" />
+    </fragment>
+</navigation>
